@@ -1,18 +1,21 @@
 import java.util.*;
-class evenArray
+class Strictly
 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int i,c=0,n;
-        n=sc.nextInt();
+        int c=0,m=0;
+        int n=sc.nextInt();
         int [] a=new int[n];
-        for(i=0;i<n;i++)
+        for(int i=0;i<n;i++)
         {
             a[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
             if(a[i]%2==0)
             {
-                c=c+1;
+                c+=1;
             }
         }
         if(c==n)
