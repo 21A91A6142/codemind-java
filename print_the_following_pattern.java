@@ -1,5 +1,5 @@
 import java.util.*;
-class pat
+class ptp
 {
     public static void main(String args[])
     {
@@ -7,16 +7,9 @@ class pat
         int n=sc.nextInt();
         for(int i=0;i<n;i++)
         {
-            for(int j=0;j<n;j++)
+            for(int j=n;j>0;j--)
             {
-                if(i==j)
-                {
-                    System.out.print("0");
-                }
-                else
-                {
-                    System.out.print("x");
-                }
+                System.out.print(j+" ");
             }
             System.out.println("");
         }
