@@ -1,49 +1,34 @@
 import java.util.*;
-class Primesgk
+class primes
 {
     static boolean isprime(int k)
     {
-        int i,c=0;
-        if(k<=1)
+        boolean p=true;
+        for(int i=2;i<=(int)Math.sqrt(k);i++)
         {
-            return false;
-        }
-        else
-        {
-            for(i=2;i<=(int)Math.sqrt(k);i++)
+            if(k%i==0)
             {
-                if(k%i==0)
-                {
-                    c=c+1;
-                }
+                p=false;
+                break;
             }
         }
-        if(c>0)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return p;
     }
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
-        int n,i,b,c=0;
-        n=sc.nextInt();
-        int [] a=new int[n];
-        for(i=0;i<n;i++)
+        int c=0;
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++)
         {
             a[i]=sc.nextInt();
-        }
-        for(i=0;i<n;i++)
-        {
-            if(isprime(a[i]) && a[i]>1)
+            if(isprime(a[i]) && a[i]!=1)
             {
-                c=c+1;
+                c+=1;
             }
         }
         System.out.print(c);
+        
     }
 }
